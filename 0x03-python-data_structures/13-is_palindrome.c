@@ -5,8 +5,7 @@
 listint_t *reverse_list(listint_t *head);
 listint_t *find_middle(listint_t **head);
 int compare_lists(listint_t *list1, listint_t *list2);
-void reconnect_list(listint_t **head, listint_t *middle,
-					listint_t *second_half);
+void reconnect_list(listint_t *middle, listint_t *second_half);
 
 /**
  * is_palindrome - Checks if a singly linked list is a palindrome
@@ -27,7 +26,7 @@ int is_palindrome(listint_t **head)
 	result = compare_lists(*head, second_half);
 
 	second_half = reverse_list(second_half);
-	reconnect_list(head, middle, second_half);
+	reconnect_list(middle, second_half);
 
 	return (result);
 }
@@ -93,12 +92,10 @@ int compare_lists(listint_t *list1, listint_t *list2)
 
 /**
  * reconnect_list - Reconnects the reversed second half of the list
- * @head: Double pointer to the head of the list
  * @middle: Pointer to the middle node
  * @second_half: Pointer to the head of the second half
  */
-void reconnect_list(listint_t **head, listint_t *middle,
-					listint_t *second_half)
+void reconnect_list(listint_t *middle, listint_t *second_half)
 {
 	if (middle->next == NULL)
 	{
