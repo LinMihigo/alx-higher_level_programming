@@ -2,11 +2,6 @@
 #include <stdlib.h>
 #include "lists.h"
 
-listint_t *reverse_list(listint_t *head);
-listint_t *find_middle(listint_t **head);
-int compare_lists(listint_t *list1, listint_t *list2);
-void reconnect_list(listint_t *middle, listint_t *second_half);
-
 /**
  * is_palindrome - Checks if a singly linked list is a palindrome
  * @head: Double pointer to the head of the list
