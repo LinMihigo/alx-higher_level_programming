@@ -21,5 +21,3 @@ if __name__ == "__main__":
             str = "Unknown operator. Available operators: +, -, * and /"
             print("{}".format(str))
             sys.exit(1)
-
-       
