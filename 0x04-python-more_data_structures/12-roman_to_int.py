@@ -11,8 +11,12 @@ def roman_to_int(roman_string):
         "M": 1000
     }
 
+    if not isinstance(roman_string, str) or roman_string == None:
+        return 0 
+
     for i in range(len(roman_string)):
-        if i < len(roman_string) - 1 and interpreter[roman_string[i]] < interpreter[roman_string[i + 1]]:
+        if (i < len(roman_string) - 1 and
+            interpreter[roman_string[i]] < interpreter[roman_string[i + 1]]):
             int_value -= interpreter[roman_string[i]]
         else:
             int_value += interpreter[roman_string[i]]
