@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    int_value = 0
     interpreter = {
-        "I": 1,
-        "V": 5,
-        "X": 10,
-        "L": 50,
-        "C": 100,
-        "D": 500,
-        "M": 1000
+        'I': 1, 'V': 5, 'X': 10, 'L': 50,
+        'C': 100, 'D': 500, 'M': 1000
     }
 
-    for i in range(len(roman_string)):
-        if i < len(roman_string) - 1 and interpreter[roman_string[i]] < interpreter[roman_string[i + 1]]:
-            int_value -= interpreter[roman_string[i]]
+    int_value = 0
+    prev_value = 0
+    for char in roman_string:
+        current_value = interpreter[char]
+        if prev_value < current_value:
+            int_value += current_value - 2 * prev_value
         else:
-            int_value += interpreter[roman_string[i]]
+            int_value += current_value
+        prev_value = current_value
+
     return int_value
+
