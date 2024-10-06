@@ -1,0 +1,73 @@
+================
+0-add_integer.py
+
+Module: add_integer
+
+This module provides a function to add two numbers, ensuring that the inputs are valid integers
+or floats. If the inputs are floats, they are cast to integers before the addition.
+
+Function:
+    - add_integer(a, b=98): Adds two integers or floats and returns an integer.
+    
+Usage:
+    >>> from add_integer import add_integer
+    >>> add_integer(3, 4)
+    7
+
+Raises:
+    - TypeError: If the inputs are not numbers (integers or floats) or contain invalid values like NaN or Infinity.
+    
+Notes:
+    - Floats are truncated to their integer value before addition.
+    - The default value for `b` is 98.
+================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(3, 4)
+7
+>>> add_integer(100.5, 1)
+101
+>>> add_integer(50)
+148
+>>> add_integer(-10, 20)
+10
+>>> add_integer(0, 0)
+0
+>>> add_integer(1.9, 0.2)
+1
+>>> add_integer(float('NaN'), 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+>>> add_integer(5, float('NaN'))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+>>> add_integer("3", 4)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+>>> add_integer(4, "b")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+>>> add_integer([1, 2], 3)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+>>> add_integer(None, 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+>>> add_integer(5, None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+>>> add_integer(float('inf'), 1)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
+>>> add_integer(1, float('-inf'))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
