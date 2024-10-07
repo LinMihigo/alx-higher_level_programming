@@ -9,7 +9,7 @@ def say_my_name(first_name, last_name=""):
     Args:
         first_name (string): first name string
         last_name (string): last name string
-    
+
     Raises:
         TypeError:
             - if first_name is not a string
