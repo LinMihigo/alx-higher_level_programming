@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines the Rectangle class"""
 
+
 class Rectangle:
     """Defines a rectangle
 
@@ -70,7 +71,7 @@ class Rectangle:
 
     def perimeter(self):  #: Calculates the rectangle perimeter
         return 2 * (self.__width + self.__height)
-    
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Return the Rectangle with the greater area.
