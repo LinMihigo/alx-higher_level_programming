@@ -1,0 +1,53 @@
+================
+3-say_my_name.py
+
+Module: say_my_name
+
+This module prints a message with a person's first and last name
+
+Args:
+    first_name (str): first name of the person
+    last_name (str): last name of the person
+
+Raises:
+    TypeError: If first_name or last_name is not a string
+
+Returns:
+    None
+================
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+>>> say_my_name(123, "Doe")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("John", 456)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name("Alice", "")
+My name is Alice 
+
+>>> say_my_name("Bob", None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name("Charlie", "Brown")
+My name is Charlie Brown
+>>> say_my_name("", "Smith")
+My name is  Smith
+
+>>> say_my_name("", "")
+My name is  
+
+>>> say_my_name("Ana-Maria", "Lopez")
+My name is Ana-Maria Lopez
+
+>>> say_my_name("O'Neill", "McGregor")
+My name is O'Neill McGregor

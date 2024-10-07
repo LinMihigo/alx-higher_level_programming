@@ -8,24 +8,20 @@ ensures that the matrix is well-formed (i.e., all rows have the same size) and t
 is a valid number. Division by zero is handled, and the result is rounded to two decimal places.
 
 Functions:
-----------
     - matrix_divided(matrix, div): Divides all elements of a matrix by div, returning a new matrix.
     
 Usage:
-------
     >>> from matrix_divided import matrix_divided
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
     [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
     
 Notes:
-------
     - The function raises appropriate exceptions for invalid matrix structure or divisor.
     - Results are rounded to two decimal places.
     - Each row of the matrix must have the same size.
     - Division by zero is not allowed and will raise a ZeroDivisionError.
 
 Raises:
--------
     - TypeError: For invalid input types in matrix or div.
     - ZeroDivisionError: For division by zero.
 

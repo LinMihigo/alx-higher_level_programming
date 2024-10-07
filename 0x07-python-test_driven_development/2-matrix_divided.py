@@ -6,28 +6,24 @@ def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix by a divisor.
 
-    Parameters:
-    ----------
-    matrix : list of lists
-        A matrix (list of lists) containing integers or floats.
-        All rows must be of the same size.
-    div : int or float
-        The number by which to divide all elements of the matrix.
-
-    Returns:
-    -------
-    list of lists
-        A new matrix where each element is divided by div and
-        rounded to 2 decimal places.
+    Args:
+        matrix (list of lists): A matrix (list of lists) containing integers
+            or floats. All rows must be of the same size.
+        div (int or float): The number by which to divide all elements
+            of the matrix.
 
     Raises:
-    ------
-    TypeError:
-        - If the matrix is not a list of lists of integers or floats.
-        - If each row of the matrix is not the same size.
-        - If div is not a number (integer or float).
-    ZeroDivisionError:
-        - If div is zero.
+        TypeError:
+            - If the matrix is not a list of lists of integers or floats.
+            - If each row of the matrix is not the same size.
+            - If div is not a number (integer or float).
+        ZeroDivisionError:
+            - If div is zero.
+
+    Returns:
+        list of lists: A new matrix where each element is divided by div and
+            rounded to 2 decimal places.
+
     """
     str = "matrix must be a matrix (list of lists) of integers/floats"
     if not (isinstance(matrix, list) and

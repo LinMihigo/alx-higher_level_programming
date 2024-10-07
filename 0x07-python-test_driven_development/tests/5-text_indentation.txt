@@ -1,0 +1,44 @@
+=====================
+5-text_indentation.py
+
+This module prints a text with 2 new lines after '.', '?' and ':'
+
+Args:
+    text (str): string to parse
+
+Raises:
+    TypeError: if text isn't a string
+
+Returns:
+    None
+=====================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation(1)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("")
+
+>>> text_indentation("Let's print a new-line! Here goes:\nPrinted.")
+Let's print a new-line! Here goes:
+<BLANKLINE>
+<BLANKLINE>
+Printed.
+<BLANKLINE>
+
+>>> text_indentation("A sneaky \n new line.")
+A sneaky 
+new line.
+<BLANKLINE>
+
+>>> text_indentation("Hello. How are you? I am fine: thank you.")
+Hello.
+
+How are you?
+
+I am fine:
+
+thank you.
