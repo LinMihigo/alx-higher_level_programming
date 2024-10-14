@@ -11,7 +11,7 @@ class BaseGeometry:
     area():
         Raises an Exception to indicate that the area method is not yet
         implemented.
-    
+
     integer_validator(name, value):
         Validates that the value is an integer and greater than 0.
     """
@@ -43,7 +43,7 @@ class BaseGeometry:
         TypeError:
             If the value is not an integer, with the message '<name> must be an
             integer'.
-        
+
         ValueError:
             If the value is less than or equal to 0, with the message '<name>
             must be greater than 0'.

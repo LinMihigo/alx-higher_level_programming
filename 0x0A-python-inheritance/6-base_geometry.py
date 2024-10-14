@@ -9,9 +9,10 @@ class BaseGeometry:
     Methods:
     --------
     area():
-        Raises an Exception to indicate that the area method is not yet implemented.
+        Raises an Exception to indicate that the area method is not yet
+        implemented.
     """
-    
+
     def area(self):
         """
         Raises an Exception indicating that the area method is not implemented.
