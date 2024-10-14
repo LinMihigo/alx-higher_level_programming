@@ -6,7 +6,7 @@
 >>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
-    ...
+...
 Exception: area() is not implemented
 
 # Test 2: Valid integer validation
@@ -15,23 +15,23 @@ Exception: area() is not implemented
 # Test 3: Validate that a non-integer raises TypeError
 >>> bg.integer_validator("side", "10")
 Traceback (most recent call last):
-    ...
+...
 TypeError: side must be an integer
 
 # Test 4: Validate that a negative integer raises ValueError
 >>> bg.integer_validator("side", -5)
 Traceback (most recent call last):
-    ...
+...
 ValueError: side must be greater than 0
 
 # Test 5: Validate that zero raises ValueError
 >>> bg.integer_validator("side", 0)
 Traceback (most recent call last):
-    ...
+...
 ValueError: side must be greater than 0
 
 # Test 6: Validate that a float raises TypeError
 >>> bg.integer_validator("side", 5.5)
 Traceback (most recent call last):
-    ...
+...
 TypeError: side must be an integer
