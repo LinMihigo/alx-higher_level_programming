@@ -1,6 +1,6 @@
 # Test cases for the BaseGeometry class.
 
->>> bg = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 # Test 1: Test area() method
 >>> bg = BaseGeometry()
