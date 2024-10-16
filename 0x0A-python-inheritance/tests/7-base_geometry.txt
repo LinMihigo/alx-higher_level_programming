@@ -35,3 +35,31 @@ ValueError: side must be greater than 0
 Traceback (most recent call last):
 ...
 TypeError: side must be an integer
+
+>>> bg.integer_validator("side", None)
+Traceback (most recent call last):
+...
+TypeError: side must be an integer
+
+>>> bg.integer_validator("side", (4,))
+Traceback (most recent call last):
+...
+TypeError: side must be an integer
+
+>>> bg.integer_validator("side", [3])
+Traceback (most recent call last):
+...
+TypeError: side must be an integer
+
+>>> bg.integer_validator("side", True)
+
+
+>>> bg.integer_validator("side", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: side must be an integer
+
+>>> bg.integer_validator("side", None)
+Traceback (most recent call last):
+...
+TypeError: side must be an integer
