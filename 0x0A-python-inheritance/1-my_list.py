@@ -19,5 +19,4 @@ class MyList(list):
         This method does not modify the original list, but prints a
         sorted version.
         """
-        sorted_list = sorted(self)
-        print(sorted_list)
+        print(sorted(self))
