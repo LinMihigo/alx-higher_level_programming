@@ -1,5 +1,31 @@
+#!/usr/bin/python3
+"""
+Unit tests for the Base class.
+
+Test methods:
+    test_base_id_auto_increment:
+        Ensures the ID is automatically incremented when not specified.
+
+    test_base_id_specified:
+        Ensures the ID is set correctly when specified.
+
+    test_to_json_string:
+        Verifies that the method correctly converts a list of dictionaries
+        to a JSON string.
+
+    test_from_json_string:
+        Verifies that the method correctly converts a JSON string to a list
+        of dictionaries.
+
+    test_save_to_file:
+        Ensures that an empty list is saved as "[]" to the file.
+
+    test_load_from_file_empty:
+        Ensures that loading from a nonexistent file returns an empty list.
+"""
 import unittest
 from models.base import Base
+
 
 class TestBase(unittest.TestCase):
     """Test cases for the Base class."""

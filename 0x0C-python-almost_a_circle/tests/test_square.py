@@ -1,5 +1,30 @@
+#!/usr/bin/python3
+"""
+Unit tests for the Square class.
+
+Test methods:
+    test_square_init:
+        Ensures the Square is initialized with the correct attributes.
+
+    test_square_area:
+        Verifies the area calculation is correct.
+
+    test_square_str:
+        Verifies the string representation of the square.
+
+    test_square_update:
+        Ensures the update method works with both positional and keyword
+        arguments.
+
+    test_square_save_to_file:
+        Ensures that the Square is correctly saved to a JSON file.
+
+    test_square_load_from_file:
+        Ensures that the Square is correctly loaded from a JSON file.
+"""
 import unittest
 from models.square import Square
+
 
 class TestSquare(unittest.TestCase):
     """Test cases for the Square class."""
