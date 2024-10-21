@@ -1,6 +1,7 @@
 #!/usr/bin/python
 """Defining the rectangle Class"""
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -115,3 +116,14 @@ class Rectangle(Base):
             self.__y = args[4]
         elif 'y' in kwargs:
             self.__y = kwargs['y']
+
+    def to_dictionary(self):
+        dict = json.dumps(
+            {
+                'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width
+            })
+        return json.loads(dict)
