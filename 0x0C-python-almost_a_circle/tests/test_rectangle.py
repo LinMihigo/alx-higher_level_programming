@@ -108,7 +108,7 @@ class TestRectangle(unittest.TestCase):
         r.display()
         self.assertEqual(self.output.getvalue(), "\n   ##\n   ##\n   ##\n")
 
-    # __str__() method 
+    # __str__() method
     def test_rectangle_str(self):
         r = Rectangle(10, 2, 1, 1, 12)
         self.assertEqual(str(r), "[Rectangle] (12) 1/1 - 10/2")
@@ -178,6 +178,7 @@ class TestRectangle(unittest.TestCase):
     def test_to_dictionary_type(self):
         r = Rectangle(1, 2)
         self.assertIsInstance(r.to_dictionary(), dict)
+
 
 if __name__ == "__main__":
     unittest.main()

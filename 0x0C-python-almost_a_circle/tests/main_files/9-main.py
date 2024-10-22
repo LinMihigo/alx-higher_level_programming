@@ -11,14 +11,14 @@ if __name__ == "__main__":
 
     print("---")
 
-    s2 = Square(2, 2)
-    print(s2)
+    s2 = Square(3, 2)
+    print(s2.height)
     print(s2.area())
     s2.display()
 
     print("---")
 
-    s3 = Square(3, 1, 3)
+    s3 = Square(3, 1, "3")
     print(s3)
     print(s3.area())
     s3.display()
