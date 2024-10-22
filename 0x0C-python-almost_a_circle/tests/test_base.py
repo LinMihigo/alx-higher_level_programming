@@ -60,3 +60,6 @@ class TestBase(unittest.TestCase):
     def test_load_from_file_empty(self):
         instances = Base.load_from_file()
         self.assertEqual(instances, [])
+
+if __name__ == "__main__":
+    unittest.main()

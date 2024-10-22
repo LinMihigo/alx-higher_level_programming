@@ -5,7 +5,8 @@ Unit tests for the Square class.
 Test methods:
     test_square_init:
         Ensures the Square is initialized with the correct attributes.
-
+if __name__ == "__main__":
+    unittest.main()
     test_square_area:
         Verifies the area calculation is correct.
 
@@ -67,3 +68,6 @@ class TestSquare(unittest.TestCase):
         instances = Square.load_from_file()
         self.assertEqual(len(instances), 2)
         self.assertTrue(isinstance(instances[0], Square))
+
+if __name__ == "__main__":
+    unittest.main()

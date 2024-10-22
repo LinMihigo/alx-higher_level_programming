@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Defining the rectangle Class"""
 from models.base import Base
 import json
