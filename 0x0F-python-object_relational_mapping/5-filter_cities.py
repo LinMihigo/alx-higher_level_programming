@@ -29,7 +29,7 @@ def call_query(user, passwd, db, arg):
             from cities
             JOIN states ON cities.state_id = states.id
             WHERE states.name = '{}'
-            """.format(args[3]))
+            """.format(arg))
     query_rows = c.fetchall()
     print(", ".join(row[0] for row in query_rows))
     c.close()
