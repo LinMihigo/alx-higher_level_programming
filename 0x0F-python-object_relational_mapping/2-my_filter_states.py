@@ -21,11 +21,10 @@ def call_query(user, passwd, db, arg):
         host="localhost",
         user=user,
         passwd=passwd,
-        db=db,
-        port=3306
+        db=db
         )
     c = conn.cursor()
-    c.execute('SELECT * FROM states WHERE name = "{}" ORDER BY id ASC'
+    c.execute('SELECT * FROM states WHERE name LIKE BINARY {} ORDER BY id ASC'
               .format(arg))
     query_rows = c.fetchall()
     for row in query_rows:

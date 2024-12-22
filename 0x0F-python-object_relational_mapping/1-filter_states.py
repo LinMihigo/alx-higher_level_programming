@@ -28,7 +28,7 @@ def call_query(user, passwd, db):
         SELECT
         *
         FROM states
-        WHERE name like 'N%'
+        WHERE name like BINARY 'N%'
         ORDER BY id ASC
         """
     )
