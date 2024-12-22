@@ -12,13 +12,14 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     The State class inheriting from Base
 
     Args:
-        Base (sqlalchemy.ext.declarative.api.DeclarativeMeta): maps python classes
-        to db tables
+        Base (sqlalchemy.ext.declarative.api.DeclarativeMeta): maps python
+        classes to db tables
 
     Attributes:
         id (int): id
