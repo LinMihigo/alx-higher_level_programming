@@ -21,7 +21,8 @@ def call_query(user, passwd, db, arg):
         host="localhost",
         user=user,
         passwd=passwd,
-        db=db
+        db=db,
+        port=3306
         )
     c = conn.cursor()
     c.execute('SELECT * FROM states WHERE name = "{}" ORDER BY id ASC'
