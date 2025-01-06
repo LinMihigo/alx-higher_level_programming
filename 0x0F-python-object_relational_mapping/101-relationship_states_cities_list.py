@@ -7,14 +7,19 @@ from sys import argv
 from relationship_state import State
 from relationship_city import City
 
+
 if __name__ == "__main__":
     if len(argv) != 4:
-        print("Usage: {} <mysql_username> <mysql_password> <database_name>".format(argv[0]))
+        print("Usage: {} <mysql_username> <mysql_password> <database_name>"
+              .format(argv[0]))
         exit(1)
 
     username, password, db_name = argv[1], argv[2], argv[3]
-    
-    engine = create_engine(f"mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}", pool_pre_ping=True)
+
+    engine = create_engine(
+        f"mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}",
+        pool_pre_ping=True
+        )
     Session = sessionmaker(bind=engine)
     session = Session()
 
