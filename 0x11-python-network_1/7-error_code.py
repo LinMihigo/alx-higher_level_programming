@@ -23,5 +23,6 @@ def fetch_url_body(url):
     else:
         print(response.text)
 
+
 if __name__ == "__main__":
     fetch_url_body(sys.argv[1])

@@ -23,5 +23,6 @@ def send_post_request(url, email):
     with urllib.request.urlopen(url, data) as response:
         print(response.read().decode('utf-8'))
 
+
 if __name__ == "__main__":
     send_post_request(sys.argv[1], sys.argv[2])

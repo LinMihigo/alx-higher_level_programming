@@ -22,5 +22,6 @@ def fetch_url_status(url):
         print(f"\t- content: {body}")
         print(f"\t- utf8 content: {body.decode('utf-8')}")
 
+
 if __name__ == "__main__":
     fetch_url_status("https://alx-intranet.hbtn.io/status")

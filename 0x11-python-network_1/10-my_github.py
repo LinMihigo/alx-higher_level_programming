@@ -19,11 +19,12 @@ def get_github_id(username, token):
     """
     url = 'https://api.github.com/user'
     response = requests.get(url, auth=(username, token))
-    
+
     if response.status_code == 200:
         print(response.json().get('id'))
     else:
         print("Error: Unable to fetch user data")
+
 
 if __name__ == "__main__":
     get_github_id(sys.argv[1], sys.argv[2])

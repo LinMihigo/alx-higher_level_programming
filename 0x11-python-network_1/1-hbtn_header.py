@@ -21,5 +21,6 @@ def fetch_x_request_id(url):
         x_request_id = response.headers.get("X-Request-Id")
         print(x_request_id)
 
+
 if __name__ == "__main__":
     fetch_x_request_id(sys.argv[1])

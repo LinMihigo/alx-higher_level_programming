@@ -21,5 +21,6 @@ def fetch_status(url):
     print(f"\t- type: {type(response.text)}")
     print(f"\t- content: {response.text}")
 
+
 if __name__ == "__main__":
     fetch_status("https://alx-intranet.hbtn.io/status")

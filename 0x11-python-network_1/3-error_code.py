@@ -24,5 +24,6 @@ def fetch_url_body(url):
     except urllib.error.HTTPError as e:
         print(f"Error code: {e.code}")
 
+
 if __name__ == "__main__":
     fetch_url_body(sys.argv[1])
