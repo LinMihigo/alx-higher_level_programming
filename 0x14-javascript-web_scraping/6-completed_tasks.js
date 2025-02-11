@@ -1,26 +1,18 @@
 #!/usr/bin/node
-const https = require('https');
+const request = require('request');
 const url = process.argv[2];
-https.get(url, (res) => {
-  let data = '';
-  res.on('data', (chunk) => { data += chunk; });
-  res.on('end', () => {
-    const todos = JSON.parse(data);
-    const counts = {};
 
-    todos.forEach(todo => {
-      if (todo.completed) {
-        const userId = todo.userId;
-        counts[userId] = (counts[userId] || 0) + 1;
-      }
-    });
+request(url, (err, response, body) => {
+  if (err) return console.error(err);
+  if (response.statusCode !== 200) {
+    return console.error(`Error: Status code ${response.statusCode}`);
+  }
 
-    const sortedCounts = Object.fromEntries(
-      Object.entries(counts)
-        .sort(([a], [b]) => parseInt(a) - parseInt(b))
-    );
-    console.log(JSON.stringify(sortedCounts, null, 2));
-  });
-}).on('error', (err) => {
-  console.error('Error:', err);
+  const tasks = JSON.parse(body);
+  const completed = tasks.reduce((acc, task) => {
+    if (task.completed) acc[task.userId] = (acc[task.userId] || 0) + 1;
+    return acc;
+  }, {});
+
+  console.log(completed);
 });
